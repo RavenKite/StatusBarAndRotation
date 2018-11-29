@@ -1,24 +1,177 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EhJ-eS-saG">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Tab Bar Controller-->
+        <scene sceneID="WEA-lt-2hT">
+            <objects>
+                <tabBarController id="EhJ-eS-saG" customClass="TabBarController" customModule="StatusBarDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vOV-5D-tDC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="ZPo-Ux-SwD" kind="relationship" relationship="viewControllers" id="zz1-Gh-ydf"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KNl-YM-AYy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1545" y="-30"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="gfw-ix-JAR">
+            <objects>
+                <navigationController id="ZPo-Ux-SwD" customClass="NavigationController" customModule="StatusBarDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="Yux-NT-DwY"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="LsW-v8-Ama">
+                        <rect key="frame" x="0.0" y="20" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.23018704354763031" green="0.77713233232498169" blue="0.3158949613571167" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="H6x-a8-3QL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dri-fT-RzP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-700" y="-30"/>
+        </scene>
+        <!--ViewController-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="StatusBarDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V86-Ju-hZt">
+                                <rect key="frame" x="79" y="343" width="256" height="50"/>
+                                <color key="backgroundColor" red="0.15101002156734467" green="0.56891876459121704" blue="0.43715286254882812" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="WJg-4w-H7Y"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Push">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="bpn-Y4-o4y" kind="show" id="jED-iF-HxY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90823972225189209" green="0.92638683319091797" blue="0.9317171573638916" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="V86-Ju-hZt" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="6hQ-65-0Tt"/>
+                            <constraint firstItem="V86-Ju-hZt" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.618" id="c2y-T4-02i"/>
+                            <constraint firstItem="V86-Ju-hZt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="p2u-0Y-dxq"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="ViewController" id="7QO-RY-DGZ"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="108" y="-30"/>
+        </scene>
+        <!--2nd-->
+        <scene sceneID="2BE-3a-Yqt">
+            <objects>
+                <viewController title="2nd" id="bpn-Y4-o4y" customClass="ViewController" customModule="StatusBarDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="L7a-Sh-iqZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a0y-OD-Pu7">
+                                <rect key="frame" x="79" y="343" width="256" height="50"/>
+                                <color key="backgroundColor" red="0.15101002159999999" green="0.56891876460000002" blue="0.43715286250000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="gtb-QF-qAb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Push">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="QlW-Ow-CUh" kind="show" id="n4e-H2-Y7f"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="a0y-OD-Pu7" firstAttribute="width" secondItem="L7a-Sh-iqZ" secondAttribute="width" multiplier="0.618" id="91a-zl-V4a"/>
+                            <constraint firstItem="a0y-OD-Pu7" firstAttribute="centerX" secondItem="L7a-Sh-iqZ" secondAttribute="centerX" id="9Im-vz-5Dn"/>
+                            <constraint firstItem="a0y-OD-Pu7" firstAttribute="centerY" secondItem="L7a-Sh-iqZ" secondAttribute="centerY" id="BpR-4r-QSg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="b2i-Sn-FOy"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="2nd" largeTitleDisplayMode="never" id="yCB-NN-8t7"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Auz-RJ-98g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="916" y="-30"/>
+        </scene>
+        <!--2nd-->
+        <scene sceneID="uc3-ZD-r6x">
+            <objects>
+                <viewController title="2nd" id="QlW-Ow-CUh" customClass="ViewController" customModule="StatusBarDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xOC-8t-ss6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IxU-Se-4ZA">
+                                <rect key="frame" x="79" y="343" width="256" height="50"/>
+                                <color key="backgroundColor" red="0.15101002159999999" green="0.56891876460000002" blue="0.43715286250000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="1Ng-xT-7ih"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Push">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="9Hm-Bm-9xC" kind="show" id="rJi-zE-lhi"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="IxU-Se-4ZA" firstAttribute="width" secondItem="xOC-8t-ss6" secondAttribute="width" multiplier="0.618" id="K2S-Xp-13e"/>
+                            <constraint firstItem="IxU-Se-4ZA" firstAttribute="centerX" secondItem="xOC-8t-ss6" secondAttribute="centerX" id="pKC-0Y-IKu"/>
+                            <constraint firstItem="IxU-Se-4ZA" firstAttribute="centerY" secondItem="xOC-8t-ss6" secondAttribute="centerY" id="zSZ-bs-8dE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1x4-Pa-ODa"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="3rd" id="8ce-Gj-ejJ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z3S-9R-UnE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1700" y="-30"/>
+        </scene>
+        <!--2nd-->
+        <scene sceneID="kEa-Hc-cVW">
+            <objects>
+                <viewController title="2nd" id="9Hm-Bm-9xC" customClass="ViewController" customModule="StatusBarDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Hrz-uy-sBZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <viewLayoutGuide key="safeArea" id="gWk-ep-lhq"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="4th" id="or9-zD-z44"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FMn-Od-EDY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2509" y="-30"/>
         </scene>
     </scenes>
 </document>

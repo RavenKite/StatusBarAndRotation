@@ -12,6 +12,8 @@
 		E980E5BB21AF871E00503867 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E980E5B921AF871E00503867 /* Main.storyboard */; };
 		E980E5BD21AF871F00503867 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E980E5BC21AF871F00503867 /* Assets.xcassets */; };
 		E980E5C021AF871F00503867 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E980E5BE21AF871F00503867 /* LaunchScreen.storyboard */; };
+		E980E5E621AF8DD800503867 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E980E5E521AF8DD800503867 /* TabBarController.swift */; };
+		E980E5E821AF8DE900503867 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E980E5E721AF8DE900503867 /* NavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		E980E5BC21AF871F00503867 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E980E5BF21AF871F00503867 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E980E5C121AF871F00503867 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E980E5E521AF8DD800503867 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		E980E5E721AF8DE900503867 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,11 +58,13 @@
 		E980E5B421AF871E00503867 /* StatusBarDemo */ = {
 			isa = PBXGroup;
 			children = (
-				E980E5B521AF871E00503867 /* AppDelegate.swift */,
-				E980E5B721AF871E00503867 /* ViewController.swift */,
 				E980E5B921AF871E00503867 /* Main.storyboard */,
-				E980E5BC21AF871F00503867 /* Assets.xcassets */,
 				E980E5BE21AF871F00503867 /* LaunchScreen.storyboard */,
+				E980E5B521AF871E00503867 /* AppDelegate.swift */,
+				E980E5E521AF8DD800503867 /* TabBarController.swift */,
+				E980E5E721AF8DE900503867 /* NavigationController.swift */,
+				E980E5B721AF871E00503867 /* ViewController.swift */,
+				E980E5BC21AF871F00503867 /* Assets.xcassets */,
 				E980E5C121AF871F00503867 /* Info.plist */,
 			);
 			path = StatusBarDemo;
@@ -135,6 +141,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E980E5E621AF8DD800503867 /* TabBarController.swift in Sources */,
+				E980E5E821AF8DE900503867 /* NavigationController.swift in Sources */,
 				E980E5B821AF871E00503867 /* ViewController.swift in Sources */,
 				E980E5B621AF871E00503867 /* AppDelegate.swift in Sources */,
 			);

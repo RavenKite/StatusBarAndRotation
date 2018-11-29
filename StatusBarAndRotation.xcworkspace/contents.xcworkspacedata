@@ -2,9 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:ScreenRotationDemo/ScreenRotationDemo.xcodeproj">
+      location = "group:StatusBarDemo/StatusBarDemo.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:StatusBarDemo/StatusBarDemo.xcodeproj">
+      location = "group:ScreenRotationDemo/ScreenRotationDemo.xcodeproj">
    </FileRef>
 </Workspace>
