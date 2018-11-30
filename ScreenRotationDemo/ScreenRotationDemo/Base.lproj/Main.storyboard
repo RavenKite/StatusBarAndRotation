@@ -1,24 +1,184 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FSS-c9-Syg">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Tab Bar Controller-->
+        <scene sceneID="JXV-NG-7lG">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <tabBarController id="FSS-c9-Syg" customClass="TabBarController" customModule="ScreenRotationDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cgT-N1-awb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Cer-SF-xd5" kind="relationship" relationship="viewControllers" id="vZT-mP-cUM"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D1O-O8-2wh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1618" y="-30"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="pyx-IX-eGi">
+            <objects>
+                <navigationController id="Cer-SF-xd5" customClass="NavigationController" customModule="ScreenRotationDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="dpM-HH-kWG"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="aGF-Zp-nxQ">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.23018704349999999" green="0.77713233230000001" blue="0.31589496140000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="kFX-PO-ceb" kind="relationship" relationship="rootViewController" id="s8C-6o-WiD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fq2-lQ-5SB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-700" y="-30"/>
+        </scene>
+        <!--ScreenRotation-->
+        <scene sceneID="dhI-36-OuI">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="kFX-PO-ceb" customClass="ViewController" customModule="ScreenRotationDemo" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9jV-6Q-ksy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k1P-oZ-OaM">
+                                <rect key="frame" x="71.5" y="308.5" width="232" height="50"/>
+                                <color key="backgroundColor" red="0.15101002159999999" green="0.56891876460000002" blue="0.43715286250000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="m48-OU-hIK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Push">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="rxT-sD-cYJ" kind="show" id="QxF-fJ-R6c"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="k1P-oZ-OaM" firstAttribute="centerX" secondItem="9jV-6Q-ksy" secondAttribute="centerX" id="Sw1-pD-ggb"/>
+                            <constraint firstItem="k1P-oZ-OaM" firstAttribute="centerY" secondItem="9jV-6Q-ksy" secondAttribute="centerY" id="YUk-3T-4z7"/>
+                            <constraint firstItem="k1P-oZ-OaM" firstAttribute="width" secondItem="9jV-6Q-ksy" secondAttribute="width" multiplier="0.618" id="nvB-kU-UbA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="MT9-ih-ix4"/>
                     </view>
+                    <navigationItem key="navigationItem" title="ScreenRotation" id="1Vj-Fb-iAD"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qek-Eh-7OG" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="108" y="-30"/>
+        </scene>
+        <!--2nd-->
+        <scene sceneID="Nf1-G6-wio">
+            <objects>
+                <viewController title="2nd" id="rxT-sD-cYJ" customClass="ViewController" customModule="ScreenRotationDemo" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tsm-my-SMT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bPo-0T-Y6w">
+                                <rect key="frame" x="71.5" y="308.5" width="232" height="50"/>
+                                <color key="backgroundColor" red="0.15101002159999999" green="0.56891876460000002" blue="0.43715286250000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="L69-Ll-6O9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Push">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="cwc-Rz-OsT" kind="show" id="sbx-1Q-kIt"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="bPo-0T-Y6w" firstAttribute="centerX" secondItem="tsm-my-SMT" secondAttribute="centerX" id="cYP-iM-Y2A"/>
+                            <constraint firstItem="bPo-0T-Y6w" firstAttribute="width" secondItem="tsm-my-SMT" secondAttribute="width" multiplier="0.618" id="nxq-Yh-O8n"/>
+                            <constraint firstItem="bPo-0T-Y6w" firstAttribute="centerY" secondItem="tsm-my-SMT" secondAttribute="centerY" id="sec-PE-gtm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2dO-4N-3vv"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="2nd" largeTitleDisplayMode="never" id="i5v-oL-gRf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2QU-kp-AA0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="916" y="-30"/>
+        </scene>
+        <!--2nd-->
+        <scene sceneID="hpk-th-PKi">
+            <objects>
+                <viewController title="2nd" id="cwc-Rz-OsT" customClass="ViewController" customModule="ScreenRotationDemo" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6zU-Eh-5yW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T9Y-iy-hHN">
+                                <rect key="frame" x="71.5" y="308.5" width="232" height="50"/>
+                                <color key="backgroundColor" red="0.15101002159999999" green="0.56891876460000002" blue="0.43715286250000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="h0e-4b-x57"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Push">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="rse-5t-aVk" kind="show" id="t2c-z7-HIc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="T9Y-iy-hHN" firstAttribute="centerX" secondItem="6zU-Eh-5yW" secondAttribute="centerX" id="Reg-ZG-UKN"/>
+                            <constraint firstItem="T9Y-iy-hHN" firstAttribute="centerY" secondItem="6zU-Eh-5yW" secondAttribute="centerY" id="f25-ec-OxK"/>
+                            <constraint firstItem="T9Y-iy-hHN" firstAttribute="width" secondItem="6zU-Eh-5yW" secondAttribute="width" multiplier="0.618" id="wTL-Jn-eVI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Jh8-kv-ORc"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="3rd" id="vEo-go-8lA"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="esS-Hm-V9c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1700" y="-30"/>
+        </scene>
+        <!--2nd-->
+        <scene sceneID="XYm-kx-1VD">
+            <objects>
+                <viewController title="2nd" id="rse-5t-aVk" customClass="ViewController" customModule="ScreenRotationDemo" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9az-eA-iIW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <viewLayoutGuide key="safeArea" id="7sE-Vy-ZcE"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="4th" id="p3M-r3-4Xr"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pKe-bK-nWP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2509" y="-30"/>
         </scene>
     </scenes>
 </document>

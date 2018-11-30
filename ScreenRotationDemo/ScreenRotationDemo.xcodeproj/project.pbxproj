@@ -7,14 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E93B830821B106F10029E545 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93B830721B106F10029E545 /* TabBarController.swift */; };
 		E980E5D421AF875E00503867 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E980E5D321AF875E00503867 /* AppDelegate.swift */; };
 		E980E5D621AF875E00503867 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E980E5D521AF875E00503867 /* ViewController.swift */; };
 		E980E5D921AF875E00503867 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E980E5D721AF875E00503867 /* Main.storyboard */; };
 		E980E5DB21AF875F00503867 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E980E5DA21AF875F00503867 /* Assets.xcassets */; };
 		E980E5DE21AF875F00503867 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E980E5DC21AF875F00503867 /* LaunchScreen.storyboard */; };
+		E980E5F321B0CFF000503867 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E980E5F121B0CFF000503867 /* NavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E93B830721B106F10029E545 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		E980E5D021AF875E00503867 /* ScreenRotationDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScreenRotationDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E980E5D321AF875E00503867 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E980E5D521AF875E00503867 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,7 @@
 		E980E5DA21AF875F00503867 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E980E5DD21AF875F00503867 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E980E5DF21AF875F00503867 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E980E5F121B0CFF000503867 /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,11 +58,13 @@
 		E980E5D221AF875E00503867 /* ScreenRotationDemo */ = {
 			isa = PBXGroup;
 			children = (
-				E980E5D321AF875E00503867 /* AppDelegate.swift */,
-				E980E5D521AF875E00503867 /* ViewController.swift */,
 				E980E5D721AF875E00503867 /* Main.storyboard */,
-				E980E5DA21AF875F00503867 /* Assets.xcassets */,
 				E980E5DC21AF875F00503867 /* LaunchScreen.storyboard */,
+				E980E5D321AF875E00503867 /* AppDelegate.swift */,
+				E93B830721B106F10029E545 /* TabBarController.swift */,
+				E980E5F121B0CFF000503867 /* NavigationController.swift */,
+				E980E5D521AF875E00503867 /* ViewController.swift */,
+				E980E5DA21AF875F00503867 /* Assets.xcassets */,
 				E980E5DF21AF875F00503867 /* Info.plist */,
 			);
 			path = ScreenRotationDemo;
@@ -136,6 +142,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E980E5D621AF875E00503867 /* ViewController.swift in Sources */,
+				E93B830821B106F10029E545 /* TabBarController.swift in Sources */,
+				E980E5F321B0CFF000503867 /* NavigationController.swift in Sources */,
 				E980E5D421AF875E00503867 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
